@@ -1,0 +1,26 @@
+# Secrets - NEVER commit these
+.env
+
+# InsightFace model cache (large files, downloaded at build time)
+insightFace/
+
+# Face embedding temp file
+face_embedding.txt
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.Python
+
+# Virtual environment
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
