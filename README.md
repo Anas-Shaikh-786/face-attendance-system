@@ -11,7 +11,7 @@
 
 A real-time face recognition based attendance system built with InsightFace, Redis, and Streamlit — deployed on Google Cloud Run.
 
-**🔴 Live Demo:** `Coming Soon`
+**🔴 Live Demo:** `https://face-attendance-system-enspuvmucpstfvmw63m8qb.streamlit.app/`
 
 </div>
 
@@ -56,7 +56,7 @@ Streamlit WebRTC  ──►  InsightFace (buffalo_sc)
 | Database | Redis (RedisLabs Cloud) |
 | Computer Vision | OpenCV |
 | Containerization | Docker |
-| Cloud Deployment | Google Cloud Run (asia-south1) |
+| Deployment | shre.streamlit.io |
 
 ---
 
@@ -178,6 +178,6 @@ gcloud run deploy attendance-app \
 
 ## 👤 Author
 
-**Shaikh Mohammed Anas Salim**  
+**Shaikh Mohammed Anas **  
 BCA Graduate | Aspiring Data Scientist & ML Engineer  
 [![GitHub](https://img.shields.io/badge/GitHub-Anas--Shaikh--786-181717?style=flat&logo=github)](https://github.com/Anas-Shaikh-786)
