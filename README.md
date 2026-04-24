@@ -9,7 +9,7 @@
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
 
-A real-time face recognition based attendance system built with InsightFace, Redis, and Streamlit — deployed on Google Cloud Run.
+A real-time face recognition based attendance system built with InsightFace, Redis, and Streamlit — deployed on streamlit.io.
 
 **🔴 Live Demo:** `https://face-attendance-system-enspuvmucpstfvmw63m8qb.streamlit.app/`
 
