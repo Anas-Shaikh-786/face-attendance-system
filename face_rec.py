@@ -1,22 +1,27 @@
-from dotenv import load_dotenv
-load_dotenv()  # loads .env variables into os.environ
+import os
+import streamlit as st
+
+# ✅ Works on both local (.env) and Streamlit Cloud (st.secrets)
+try:
+    hostname = st.secrets["REDIS_HOST"]
+    port = int(st.secrets["REDIS_PORT"])
+    password = st.secrets["REDIS_PASSWORD"]
+except Exception:
+    from dotenv import load_dotenv
+    load_dotenv()
+    hostname = os.environ.get("REDIS_HOST")
+    port = int(os.environ.get("REDIS_PORT", 13725))
+    password = os.environ.get("REDIS_PASSWORD")
+
 import pandas as pd
 import numpy as np
 import cv2
 import time
 from datetime import datetime
-import os
 
 import redis
-
-# Insightface
 from insightface.app import FaceAnalysis
 from sklearn.metrics import pairwise
-
-# ✅ Redis Connection via Environment Variables (safe for deployment)
-hostname = os.environ.get("REDIS_HOST", "redis-13725.c14.us-east-1-3.ec2.cloud.redislabs.com")
-port = int(os.environ.get("REDIS_PORT", 13725))
-password = os.environ.get("REDIS_PASSWORD", "")
 
 r = redis.StrictRedis(
     host=hostname,
@@ -38,7 +43,7 @@ def retrieve_data(name):
     return retrieve_df[['Name', 'Role', 'facial_features']]
 
 
-# ✅ Use buffalo_l model (higher accuracy)
+# Configure Face Analysis
 faceapp = FaceAnalysis(
     name="buffalo_sc",
     root='insightFace',
